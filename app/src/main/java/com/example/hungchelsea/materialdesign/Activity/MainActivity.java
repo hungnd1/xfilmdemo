@@ -12,6 +12,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,18 +21,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hungchelsea.materialdesign.Adapter.DesignDemoPagerAdapter;
+import com.example.hungchelsea.materialdesign.Adapter.ViewPagerAdapter;
+import com.example.hungchelsea.materialdesign.Fragment.DesignDemoFragment;
 import com.example.hungchelsea.materialdesign.R;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
@@ -66,10 +71,11 @@ public class MainActivity extends AppCompatActivity{
 
 
         DesignDemoPagerAdapter adapter = new DesignDemoPagerAdapter(getSupportFragmentManager());
-        ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
-        viewPager.setAdapter(adapter);
-        TabLayout tabLayout = (TabLayout)findViewById(R.id.tablayout);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        setupViewPager(viewPager);
+        tabLayout = (TabLayout) findViewById(R.id.tablayout);
         tabLayout.setupWithViewPager(viewPager);
+        setupTabIcons();
     }
 
     @Override
@@ -83,6 +89,31 @@ public class MainActivity extends AppCompatActivity{
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setupTabIcons() {
+        TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabOne.setText("ONE");
+        tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_done, 0, 0);
+        tabLayout.getTabAt(0).setCustomView(tabOne);
+
+        TextView tabTwo = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabTwo.setText("TWO");
+        tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_emoticon, 0, 0);
+        tabLayout.getTabAt(1).setCustomView(tabTwo);
+
+        TextView tabThree = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabThree.setText("THREE");
+        tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_attachment, 0, 0);
+        tabLayout.getTabAt(2).setCustomView(tabThree);
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        DesignDemoPagerAdapter adapter = new DesignDemoPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new DesignDemoFragment(), "CAT");
+        adapter.addFragment(new DesignDemoFragment(), "DOG");
+        adapter.addFragment(new DesignDemoFragment(), "MOUSE");
+        viewPager.setAdapter(adapter);
     }
 
     @Override

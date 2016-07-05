@@ -20,8 +20,10 @@ import java.util.ArrayList;
  * Created by HungChelsea on 04-Jul-16.
  */
 public class DesignDemoFragment extends Fragment {
+    int color;
     private static final String tab_postion = "tab_position";
     private ArrayList<String>  listString = new ArrayList<>();
+
     public DesignDemoFragment() {
     }
 
