@@ -4,6 +4,15 @@
     <color name="colorPrimaryDark">#125688</color>
     <color name="colorAccent">#FF4081</color>
     <color name="textColorPrimary">#FFFFFF</color>
+    <color name="custom_tab">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
+    <color name="year">#999999</color>
+    <color name="title">#222222</color>
+
+    <!-- cardview-->
+    <color name="colorPrimaryCardview">#F50057</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+
 </resources>

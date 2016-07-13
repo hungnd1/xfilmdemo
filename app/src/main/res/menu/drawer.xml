@@ -5,27 +5,34 @@
         <item
             android:id="@+id/navigation_item_attachment"
             android:checked="true"
-            android:icon="@drawable/ic_attachment"
-            android:title="@string/nav_item_attachment" />
+            android:icon="@drawable/ic_live_tv_white_48dp"
+            android:title="@string/nav_item_live" />
         <item
             android:id="@+id/navigation_item_images"
-            android:icon="@drawable/ic_image"
-            android:title="@string/nav_item_images" />
+            android:icon="@drawable/ic_slideshow_white_48dp"
+            android:title="@string/nav_item_tvshow" />
         <item
             android:id="@+id/navigation_item_location"
-            android:icon="@drawable/ic_place"
-            android:title="@string/nav_item_location" />
+            android:icon="@drawable/ic_switch_video_white_48dp"
+            android:title="@string/nav_item_film" />
+        <item
+            android:id="@+id/navigation_item_video_joker"
+            android:icon="@drawable/ic_ondemand_video_white_48dp"
+            android:title="@string/nav_item_video_joker" />
     </group>
 
     <item android:title="@string/nav_sub_menu">
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:icon="@drawable/ic_emoticon"
-                    android:title="@string/nav_sub_menu_item01" />
+                    android:icon="@drawable/info_48"
+                    android:title="@string/nav_sub_menu_imfomation" />
                 <item
-                    android:icon="@drawable/ic_emoticon"
-                    android:title="@string/nav_sub_menu_item02" />
+                    android:icon="@drawable/facebook_48"
+                    android:title="@string/nav_sub_menu_fb" />
+                <item
+                    android:icon="@drawable/share_48"
+                    android:title="@string/nav_sub_menu_share" />
             </group>
         </menu>
     </item>

@@ -1,4 +1,4 @@
-package com.example.hungchelsea.materialdesign.Activity;
+package com.example.hungchelsea.film.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.example.hungchelsea.materialdesign.R;
+import com.example.hungchelsea.film.R;
 
 /**
  * Created by HungChelsea on 05-Jul-16.
@@ -23,7 +23,7 @@ public class SecondActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle("Second Activity");
+        collapsingToolbar.setTitle("Film");
     }
 
     @Override

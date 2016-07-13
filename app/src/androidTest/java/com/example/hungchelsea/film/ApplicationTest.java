@@ -1,4 +1,4 @@
-package com.example.hungchelsea.materialdesign;
+package com.example.hungchelsea.film;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

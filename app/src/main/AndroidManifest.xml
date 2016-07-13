@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hungchelsea.materialdesign">
+    package="com.example.hungchelsea.film">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity.MainActivity"
+            android:name="com.example.hungchelsea.film.activity.MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,11 +19,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.SecondActivity"
+            android:name="com.example.hungchelsea.film.activity.SecondActivity"
             android:label="@string/title_activity_second" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hungchelsea.materialdesign.Activity.MainActivity" />
+                android:value="com.example.hungchelsea.film.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.hungchelsea.film.activity.AlbumActivity"
+            android:label="@string/title_activity_album" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hungchelsea.film.activity.MainActivity" />
         </activity>
     </application>
 

@@ -1,27 +1,29 @@
-package com.example.hungchelsea.materialdesign.Adapter;
+package com.example.hungchelsea.film.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.example.hungchelsea.film.fragment.DesignDemoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by HungChelsea on 05-Jul-16.
+ * Created by HungChelsea on 04-Jul-16.
  */
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class DesignDemoPagerAdapter extends FragmentStatePagerAdapter {
 
     private final List<Fragment> mFragmentList = new ArrayList<>();
     private final List<String> mFragmentTitleList = new ArrayList<>();
 
-    public ViewPagerAdapter(FragmentManager manager) {
-        super(manager);
+    public DesignDemoPagerAdapter(FragmentManager fm) {
+        super(fm);
     }
 
     @Override
     public Fragment getItem(int position) {
-        return mFragmentList.get(position);
+        return DesignDemoFragment.newInstance(position);
     }
 
     @Override
@@ -29,7 +31,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         return mFragmentList.size();
     }
 
-    public void addFrag(Fragment fragment, String title) {
+    public void addFragment(Fragment fragment, String title) {
         mFragmentList.add(fragment);
         mFragmentTitleList.add(title);
     }

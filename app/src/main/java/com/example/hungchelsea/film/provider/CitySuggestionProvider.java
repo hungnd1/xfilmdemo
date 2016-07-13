@@ -1,4 +1,4 @@
-package com.example.hungchelsea.materialdesign.Provider;
+package com.example.hungchelsea.film.provider;
 
 import android.app.SearchManager;
 import android.content.ContentProvider;
@@ -21,7 +21,7 @@ import okhttp3.Response;
 
 public class CitySuggestionProvider extends ContentProvider {
 
-    private static final String AUTHORITY = "com.example.hungchelsea.materialdesign";
+    private static final String AUTHORITY = "com.example.hungchelsea.film";
 
     private static final int TYPE_ALL_SUGGESTIONS = 1;
     private static final int TYPE_SINGLE_SUGGESTION = 2;

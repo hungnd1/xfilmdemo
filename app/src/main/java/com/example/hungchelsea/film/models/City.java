@@ -1,4 +1,4 @@
-package com.example.hungchelsea.materialdesign.Models;
+package com.example.hungchelsea.film.models;
 
 /**
  * Created by HungChelsea on 04-Jul-16.
